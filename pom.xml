@@ -1,164 +1,161 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.sujian.develop</groupId>
-	<artifactId>student-management-system</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>pom</packaging>
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.sujian.develop</groupId>
+  <artifactId>student-management-system</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
 
-	<!-- <properties>标签定义引用重复jar包版本号，方便直接引用，便于查看和维护 -->
-	<!-- 自定义标签管理（可在其内自定义标签名、值，用法同于el表达式：${标签名}得到其值），常用于集中定义依赖版本号。 -->
-	<properties>
-		<!-- 文件拷贝时的编码 -->  
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<!-- springframework版本 -->
-		<project.springframework.version>4.3.4.RELEASE</project.springframework.version>
-		<!-- POI提供API给Java程序对Microsoft Office格式档案读和写的功能 -->
-		<project.poi.version>3.15</project.poi.version>
-		<!-- hibernate版本 -->
-		<project.hibernate.version>5.1.3.Final</project.hibernate.version>
-	</properties>
+  <!-- <properties>标签定义引用重复jar包版本号，方便直接引用，便于查看和维护 -->
+  <!-- 自定义标签管理（可在其内自定义标签名、值，用法同于el表达式：${标签名}得到其值），常用于集中定义依赖版本号。 -->
+  <properties>
+    <!-- 文件拷贝时的编码 -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <!-- springframework版本 -->
+    <project.springframework.version>4.3.4.RELEASE</project.springframework.version>
+    <!-- POI提供API给Java程序对Microsoft Office格式档案读和写的功能 -->
+    <project.poi.version>3.15</project.poi.version>
+    <!-- hibernate版本 -->
+    <project.hibernate.version>5.1.3.Final</project.hibernate.version>
+  </properties>
 
-	<!-- 依赖项目中用到的jar包，jar包管理 -->
-	<dependencies>
-		
-		<!-- 具体依赖项 -->
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-lang3</artifactId>
-			<version>3.5</version>
-		</dependency>
-		
-		<dependency>
-		    <groupId>org.apache.ant</groupId>
-		    <artifactId>ant</artifactId>
-		    <version>1.8.4</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-jdbc</artifactId>
-			<version>4.3.4.RELEASE</version>
-		</dependency>
+  <!-- 依赖项目中用到的jar包，jar包管理 -->
+  <dependencies>
+    <!-- 具体依赖项 -->
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.5</version>
+    </dependency>
 
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
-			<version>4.3.4.RELEASE</version>
-		</dependency>
+    <dependency>
+      <groupId>org.apache.ant</groupId>
+      <artifactId>ant</artifactId>
+      <version>1.8.4</version>
+    </dependency>
 
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context-support</artifactId>
-			<version>${project.springframework.version}</version>
-		</dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-jdbc</artifactId>
+      <version>4.3.4.RELEASE</version>
+    </dependency>
 
-		<dependency>
-			<groupId>commons-io</groupId>
-			<artifactId>commons-io</artifactId>
-			<version>2.4</version>
-		</dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>4.3.4.RELEASE</version>
+    </dependency>
 
-		<dependency>
-			<groupId>commons-fileupload</groupId>
-			<artifactId>commons-fileupload</artifactId>
-			<version>1.3.1</version>
-		</dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context-support</artifactId>
+      <version>${project.springframework.version}</version>
+    </dependency>
 
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.38</version>
-		</dependency>
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>2.4</version>
+    </dependency>
 
-		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<version>1.2.17</version>
-		</dependency>
+    <dependency>
+      <groupId>commons-fileupload</groupId>
+      <artifactId>commons-fileupload</artifactId>
+      <version>1.3.1</version>
+    </dependency>
 
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>servlet-api</artifactId>
-			<version>2.5</version>
-			<scope>compile</scope>
-		</dependency>
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>5.1.38</version>
+    </dependency>
 
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-webmvc</artifactId>
-			<version>${project.springframework.version}</version>
-		</dependency>
-	
-		<dependency>
-		    <groupId>org.freemarker</groupId>
-		    <artifactId>freemarker</artifactId>
-		    <version>2.3.23</version>
-		</dependency>
-		
-		<dependency>
-		    <groupId>org.apache.poi</groupId>
-		    <artifactId>poi</artifactId>
-		    <version>3.9</version>
-		</dependency>
-	</dependencies>
-	
-	<!-- 全局配置（project build），针对当前项目的所有情况都有效 -->
-	<build>
-		
-		<!-- 指定使用的插件 -->
-		<plugins>
-			<!-- 具体使用的插件 -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
-				</configuration>
-			</plugin>
-		</plugins>
-		
-		<!-- 用于包含或者排除某些资源文件 -->
-		<resources>
-			<resource>
-				<filtering>false</filtering>
-				<directory>src/main/resources</directory>
-			</resource>
-			<resource>
-				<filtering>false</filtering>
-				<directory>src/main/java</directory>
-				<!-- 指定文件将被匹配，以*作为通配符 -->
-				<includes>
-					<include>**</include>
-				</includes>
-				<!-- 指定文件将被忽略 -->
-				<excludes>
-					<exclude>**/*.java</exclude>
-				</excludes>
-			</resource>
-		</resources>
-		<testResources>
-			<testResource>
-				<filtering>false</filtering>
-				<directory>src/test/resources</directory>
-			</testResource>
-			<testResource>
-				<filtering>false</filtering>
-				<directory>src/test/java</directory>
-				<includes>
-					<include>**</include>
-				</includes>
-				<excludes>
-					<exclude>**/*.java</exclude>
-				</excludes>
-			</testResource>
-		</testResources>
-	</build>
-	
-	<!-- 一个项目有多个平级模块，也叫做多重模块，或者合成项目，modules实现平级模块管理 -->
-	<modules>
-		<!-- 具体模块名称（标明该模块和artifactId标签中模块平级），是project标签的子元素 -->
-		<module>scs-webapp</module>
-	</modules>
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.17</version>
+    </dependency>
+
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <version>2.5</version>
+      <scope>compile</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>${project.springframework.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.freemarker</groupId>
+      <artifactId>freemarker</artifactId>
+      <version>2.3.23</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi</artifactId>
+      <version>3.9</version>
+    </dependency>
+  </dependencies>
+  
+  <!-- 全局配置（project build），针对当前项目的所有情况都有效 -->
+  <build>
+    <!-- 指定使用的插件 -->
+    <plugins>
+      <!-- 具体使用的插件 -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.7</source>
+          <target>1.7</target>
+        </configuration>
+      </plugin>
+    </plugins>
+    <!-- 用于包含或者排除某些资源文件 -->
+    <resources>
+      <resource>
+        <filtering>false</filtering>
+        <directory>src/main/resources</directory>
+      </resource>
+      <resource>
+        <filtering>false</filtering>
+        <directory>src/main/java</directory>
+        <!-- 指定文件将被匹配，以*作为通配符 -->
+        <includes>
+          <include>**</include>
+        </includes>
+        <!-- 指定文件将被忽略 -->
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+    </resources>
+    <testResources>
+      <testResource>
+        <filtering>false</filtering>
+        <directory>src/test/resources</directory>
+      </testResource>
+      <testResource>
+        <filtering>false</filtering>
+        <directory>src/test/java</directory>
+        <includes>
+          <include>**</include>
+        </includes>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </testResource>
+    </testResources>
+  </build>
+
+  <!-- 一个项目有多个平级模块，也叫做多重模块，或者合成项目，modules实现平级模块管理 -->
+  <modules>
+    <!-- 具体模块名称（标明该模块和artifactId标签中模块平级），是project标签的子元素 -->
+    <module>student-management-system-webapp</module>
+  </modules>
 </project>
