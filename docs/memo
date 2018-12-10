@@ -1,0 +1,4 @@
+计划
+1、持久化层使用SpringJDBC、Hibernate、MyBatis、Jpa。
+2、控制层使用SpringMVC的ModelAndView、RestFul技术。
+2、前台使用FreeMarker模板语言、Vue.js、Ant Desig Pro。

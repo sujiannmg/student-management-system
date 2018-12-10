@@ -15,22 +15,22 @@
 	http://www.springframework.org/schema/tx 
 	http://www.springframework.org/schema/tx/spring-tx-4.1.xsd">
 	<context:annotation-config />
-	<context:component-scan base-package="com.zhigang.**.service.**" />
-	<context:component-scan base-package="com.zhigang.**.persistent.**" />
-	<context:component-scan base-package="com.zhigang.**.commons.**" />
+	<context:component-scan base-package="com.sujian.**.service.**" />
+	<context:component-scan base-package="com.sujian.**.persistent.**" />
+	<context:component-scan base-package="com.sujian.**.commons.**" />
 	
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName">
 			<value>com.mysql.jdbc.Driver</value>
 		</property>
 		<property name="url">
-			<value>jdbc:mysql://localhost:3306/scs?useUnicode=yes&amp;characterEncoding=utf8</value>
+			<value>jdbc:mysql://localhost:3306/sms?useUnicode=yes&amp;characterEncoding=utf8</value>
 		</property>
 		<property name="username">
 			<value>root</value>
 		</property>
 		<property name="password">
-			<value>123456</value>
+			<value>sujian</value>
 		</property>
 	</bean>
 	
